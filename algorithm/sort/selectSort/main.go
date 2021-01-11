@@ -1,10 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"mylib"
+)
 
 func main() {
-	num := []int{2, 19, 4, 8, 5, 6, 99, 3, 10}
-	numbers := selectSort(num)
+	numbers := []int{}
+	numbers = mylib.RandNums(numbers, 1000000, 100000)
+	numbers = selectSort(numbers)
 	fmt.Print(numbers)
 }
 

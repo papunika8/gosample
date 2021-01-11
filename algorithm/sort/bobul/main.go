@@ -2,12 +2,14 @@ package main
 
 import (
 	"fmt"
+	"mylib"
 )
 
 func main() {
-	nums := []int{2, 5, 1, 3, 6, 42, 3, 856}
-	numbers := bobbleSort(nums)
+	numbers := mylib.RandNums(1000, 100)
+	numbers = bobbleSort(numbers)
 	fmt.Println(numbers)
+	fmt.Println(cap(numbers), len(numbers))
 }
 
 func bobbleSort(numbers []int) []int {
